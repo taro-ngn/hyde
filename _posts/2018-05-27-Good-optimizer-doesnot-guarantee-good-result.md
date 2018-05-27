@@ -1,4 +1,4 @@
-# Good optimizer doesn't guarantee good training result
+
 
 If you learnt ML, did you spend hours sitting in front of your computer, trying different hyper parameters and tuning them in and out in order to make your model converge ? Then the training result was bad ? I did and I was quite frustrate.
 One time, my training loss didn't go below 2.0 while my classmates effortlessly achieved 0.5 . They even asked teacher why training process had been so easy.
@@ -7,9 +7,11 @@ I encountered this problem while training a script generator model. To understan
 
 > Adam doesn't guarantee a better result than a simple SGD optimizer. It's how you tune it that matters.
 
-It was implicitly mentioned in a paper of Yoshua Bengio [1], yet the paper didn't emphasis 2 specific technical problems that are likely to happen if we train our model with Adam Optimizer and Tensor flow.
+Why is that ? I think all of important points are already mentioned in a paper of Yoshua Bengio [1]
 
-Firstly, we should pay attention on the initial learning rate. That is important. I would not reinvent the wheel because Mr. Bengio explained this well in his paper. I only would like to explain why 'decaying learning rate' practice cannot compensate this problem and why we should care.
+It was implicitly mentioned in a paper of Yoshua Bengio[1], yet the paper didn't explain the relation between intial learning
+
+The first one is about the initial learning rate. To avoid reinvent the wheel, I wouldn't repeat what is well explained by Mr. Bengio in his paper. I only would like to explain why 'decaying learning rate' practice cannot compensate this problem and why we should care.
 
 > And big initial learning rate makes that guess useless.
 
